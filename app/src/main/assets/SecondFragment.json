@@ -1,0 +1,9 @@
+{
+  "classpath": "com.example.stenizwahyudiandroidjavaassignment.SecondFragment",
+  "layoutName": "fragment_second",
+  "layoutType": "layout",
+  "editTextName": "editTextSecond",
+  "editTextType": "id",
+  "buttonName": "button_second",
+  "buttonType": "id"
+}

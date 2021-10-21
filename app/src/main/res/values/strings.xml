@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Steniz Wahyudi App</string>
+    <string name="edit_text_first">Please input text here...</string>
+    <string name="button">Next</string>
+</resources>

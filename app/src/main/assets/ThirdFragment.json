@@ -1,0 +1,9 @@
+{
+  "classpath": "com.example.stenizwahyudiandroidjavaassignment.ThirdFragment",
+  "layoutName": "fragment_third",
+  "layoutType": "layout",
+  "editTextName": "editTextThird",
+  "editTextType": "id",
+  "buttonName": "button_third",
+  "buttonType": "id"
+}
