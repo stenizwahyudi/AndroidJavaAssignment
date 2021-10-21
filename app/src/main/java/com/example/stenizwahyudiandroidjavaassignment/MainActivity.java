@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
     String stringValue;
-    ArrayList<String> className = new ArrayList<String>();
+    ArrayList<String> className = new ArrayList<>();
     String[] classpath = {"","",""};
     String[] layoutName = {"","",""};
     String[] editTextName = {"","",""};
@@ -24,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
     String layoutType;
     String editTextType;
     String buttonType;
+    String animEnter;
+    String animPopEnter;
+    String animExit;
+    String animPopExit;
+    String animType;
     int index = 0;
 
     @Override
@@ -94,6 +99,21 @@ public class MainActivity extends AppCompatActivity {
         if (buttonType == null) {
             buttonType = obj.get("buttonType").toString();
         }
+        if (animEnter == null) {
+            animEnter = obj.get("animEnter").toString();
+        }
+        if (animPopEnter == null) {
+            animPopEnter = obj.get("animPopEnter").toString();
+        }
+        if (animExit == null) {
+            animExit = obj.get("animExit").toString();
+        }
+        if (animPopExit == null) {
+            animPopExit = obj.get("animPopExit").toString();
+        }
+        if (animType == null) {
+            animType = obj.get("animType").toString();
+        }
     }
 
     private void addDefaultFragment() throws ClassNotFoundException, InstantiationException,
@@ -125,7 +145,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.anim.enter, R.anim.exit);
+        fragmentTransaction.setCustomAnimations(
+                getResources().getIdentifier(animEnter, animType, getPackageName()),
+                getResources().getIdentifier(animExit, animType, getPackageName()),
+                getResources().getIdentifier(animPopEnter, animType, getPackageName()),
+                getResources().getIdentifier(animPopExit, animType, getPackageName()));
         fragmentTransaction.replace(R.id.fragmentContainer,fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
@@ -142,6 +166,5 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         className.remove(className.size() - 1);
-
     }
 }

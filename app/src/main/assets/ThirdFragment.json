@@ -5,5 +5,10 @@
   "editTextName": "editTextThird",
   "editTextType": "id",
   "buttonName": "button_third",
-  "buttonType": "id"
+  "buttonType": "id",
+  "animEnter": "enter",
+  "animPopEnter": "pop_enter",
+  "animExit": "exit",
+  "animPopExit": "pop_exit",
+  "animType": "anim"
 }
